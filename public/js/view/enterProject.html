@@ -1,0 +1,63 @@
+<div class="container">
+
+  <div class="row" style="margin-top:20px">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <form role="form"  novalidate>
+        <span style="color:red;" id="validatemessage"></span> 
+        <fieldset>
+          <h2>Enter Project</h2>
+          <hr class="colorgraph">
+          <div class="form-error" ng-bind="errorMessage"></div>
+          <div class="form-group">
+              <input type="text" name="Purpose" id="purpose" class="form-control input-lg" placeholder="purpose" ng-model="host.purpose" required ng-minlength="3">
+          </div>
+          <div class="form-group">
+              <input type="text" name="Date_completed" id="date_completed" class="form-control input-lg" placeholder="date_completed" ng-model="host.date_completed">
+          </div>
+          <div class="form-group">
+              <input type="text" name="Intended_type_of_craft" id="intended_type_of_craft" class="form-control input-lg" placeholder="intended_type_of_craft" ng-model="host.intended_type_of_craft" required ng-minlength="3">
+          </div>
+          <div class="form-group">
+              <input type="text" name="Max_difficulty" id="max_difficulty" class="form-control input-lg" placeholder="max_difficulty" ng-model="host.max_difficulty" required ng-minlength="3">
+          </div>
+          <div class="form-group">
+              <input type="text" name="Min_difficulty" id="min_difficulty" class="form-control input-lg" placeholder="min_difficulty" ng-model="host.min_difficulty" required ng-minlength="3">
+          </div>
+          
+          <div class="form-group">
+              <input type="text" name="Engineer" id="engineer" class="form-control input-lg" placeholder="engineer" ng-model="host.engineer">
+          </div>
+          <div class="form-group">
+              <input type="text" name="Description" id="description" class="form-control input-lg" placeholder="description" ng-model="host.description">
+          </div>         
+          <div class="form-group">
+              <input type="text" name="Design_cost" id="design_cost" class="form-control input-lg" placeholder="design_cost" ng-model="host.design_cost">
+          </div>
+          <div class="form-group">
+              <input type="text" name="Construction_cost" id="construction_cost" class="form-control input-lg" placeholder="construction_cost" ng-model="host.construction_cost">
+          </div>
+          <div class="form-group">
+              <input type="text" name="Land_easement_cost" id="land_easement_cost" class="form-control input-lg" placeholder="land_easement_cost" ng-model="host.land_easement_cost">
+          </div>
+          <div class="form-group">
+              <input type="text" name="Total_cost" id="total_cost" class="form-control input-lg" placeholder="total_cost" ng-model="host.total_cost">
+          </div>
+          <div class="form-group" ng-hide = "routeID">
+              <input type="text" name="Site_id" id="site_id" class="form-control input-lg" placeholder="site_id" ng-model="host.site_id">
+          </div>
+          <div class="form-group">
+              <input type="text" name="Verification_id" id="verification_id" class="form-control input-lg" placeholder="verification_id" ng-model="host.verification_id">
+          </div>
+          <div class="form-group">
+              <a href="" class="btn btn-lg btn-primary btn-block" ng-click="enterproject()">Submit</a>
+          </div>
+          <div class="form-group">
+              <a href="" class="btn btn-lg btn-primary btn-block" ng-click="gohome()">Return to Dashboard</a>
+          </div>
+          <hr class="colorgraph">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+</div>

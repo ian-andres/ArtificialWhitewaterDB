@@ -1,0 +1,35 @@
+<div class="container">
+
+  <div class="row" style="margin-top:20px">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <form role="form"  novalidate>
+        <span style="color:red;" id="validatemessage"></span> 
+        <fieldset>
+          <h2>Enter Verification</h2>
+          <hr class="colorgraph">
+          <div class="form-error" ng-bind="errorMessage"></div>
+          <div class="form-group">
+              <input type="text" name="Name_of_source" id="name_of_source" class="form-control input-lg" placeholder="name_of_source" ng-model="host.name_of_source" required ng-minlength="3">
+          </div>
+          <div class="form-group">
+              <input type="text" name="Website" id="website" class="form-control input-lg" placeholder="website" ng-model="host.website" required ng-minlength="3">
+          </div>
+          <div class="form-group">
+              <input type="text" name="Date_of_source" id="date_of_source" class="form-control input-lg" placeholder="date_of_source" ng-model="host.date_of_source" required ng-minlength="3">
+          </div>
+          <div class="form-group">
+              <input type="text" name="Authority" id="authority" class="form-control input-lg" placeholder="authority" ng-model="host.authority">
+          </div>         
+          <div class="form-group">
+              <a href="" class="btn btn-lg btn-primary btn-block" ng-click="enterverification()">Submit</a>
+          </div>
+          <div class="form-group">
+              <a href="" class="btn btn-lg btn-primary btn-block" ng-click="gohome()">Return to Dashboard</a>
+          </div>
+          <hr class="colorgraph">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+</div>

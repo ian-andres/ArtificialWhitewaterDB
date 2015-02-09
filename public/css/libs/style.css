@@ -1,0 +1,33 @@
+#main-navbar .user-menu>img {
+	border-radius: 25px;
+	display: inline-block;
+	height: 20px;
+	margin: -2px 0 0 0;
+	width: 20px;
+}
+.main-header{
+	text-align: center;
+	padding:15px;
+	margin-top: 50px;
+}
+.link{
+	cursor: pointer;
+}
+.map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+}
+.btn-primary {
+color: #fff;
+background-color: #0B0B0B;
+border-color: #FFFFFF;
+}
+.btn:hover,
+.btn:focus,
+.btn.focus {
+background-color: #aaaaaa;
+
+  color: #FFFFFF;
+  text-decoration: none;
+}

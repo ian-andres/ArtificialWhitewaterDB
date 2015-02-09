@@ -1,0 +1,227 @@
+<div class = "container-fluid">
+<!-- <div ng-repeat= "item in itemst">
+</div> -->
+	<div class="row" style="margin-top:20px">
+		
+		<div class = "col-md-8"md>	
+			<a href="" class="btn  btn-primary btn-lg" ng-click="getSites()">Show All Sites</a>
+			<a href="" class="btn  btn-primary btn-lg" ng-click="getProjects()">Show All Projects</a>
+			<a href="" class="btn  btn-primary btn-lg" ng-click="getRepairs()">Show All Repairs</a>
+			<a href="" class="btn  btn-primary btn-lg" ng-click="getIncidents()">Show All Incidents</a>
+			<a href="" class="btn  btn-primary btn-lg" ng-click="getAllVerifications()">Show All Verifications</a>
+			<a href="" class="btn  btn-primary btn-lg" ng-click="gohome()">Return to Dashboard</a>
+			
+		</div>
+
+	</div>
+	<div class="row" style="margin-top:20px">
+
+	
+
+	<table ng-show= "siteTable" st-table="rowCollection" class="table table-striped">
+	<thead>
+	<tr>
+		<th>Site ID</th>
+		<th>Name</th>
+		<th>Water Source</th>
+		<th>Power Source</th>
+		<th>Latitude</th>
+		<th>Longitude</th>
+		<th>State</th>
+		<th>City</th>
+		<th>Country</th>
+		<th>Description</th>
+		<th>Owner</th>
+		<th>Date Completed</th>
+		<th>Project</th>
+		<th>Repair</th>
+		<th>Incident</th>
+		<th>Location</th>
+
+
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="item in items">
+		<td>{{item.Site_id}}</td>
+		<td>{{item.Name}}</td>
+		<td>{{item.Water_source}}</td>
+		<td>{{item.Power_source}}</td>
+		<td>{{item.Latitude}}</td>
+		<td>{{item.Longitude}}</td>
+		<td>{{item.State}}</td>
+		<td>{{item.City}}</td>
+		<td>{{item.Country}}</td>
+		<td>{{item.Description}}</td>
+		<td>{{item.Owner}}</td>
+		<td>{{item.Date_completed}}</td>
+		<td><a href="" ng-click = "projectView(item.Site_id)">Add </a>
+			<br>
+			<a href="" ng-click = "projectView(item.Site_id)">Show </a></td>
+		<td><a href="" ng-click = "repairView(item.Site_id)">Add</a>
+			<br>
+			<a href="" ng-click = "repairView(item.Site_id)">Show</a></td>
+		<td><a href="" ng-click = "incidentView(item.Site_id)">Add </a><br><a href="" ng-click = "repairView(item.Site_id)">Show</a></td>
+		<td><a href="" ng-click = "mapView(item.Latitude,item.Longitude)">Show Location</a></td>
+
+<!-- 		<td>{{item.lastName}}</td>
+		<td>{{item.birthDate}}</td>
+		<td>{{item.balance}}</td>
+		<td>{{item.email}}</td> -->
+	</tr>
+	</tbody>
+</table>
+	<table ng-show= "projectTable" st-table="rowCollection" class="table table-striped">
+	<thead>
+	<tr>
+		<th>Purpose</th>
+		<th>Date Completed</th>
+		<th>Intended Type of Craft</th>
+		<th>Max Difficulty</th>
+		<th>Min Difficulty</th>
+		<th>Engineer</th>
+		<th>Description</th>
+		<th>Construction Cost</th>
+		<th>Design Cost</th>
+		<th>Land and Easements Cost</th>
+		<th>Total Cost</th>
+		<th>Site ID</th>
+		<th>Verification ID</th>
+
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="item in items">
+		<td>{{item.Purpose}}</td>
+		<td>{{item.Date_completed}}</td>
+		<td>{{item.Intended_type_of_craft}}</td>
+		<td>{{item.Max_difficulty}}</td>
+		<td>{{item.Min_difficulty}}</td>
+		<td>{{item.Engineer}}</td>
+		<td>{{item.Description}}</td>
+		<td>{{item.Construction_cost}}</td>
+		<td>{{item.Design_cost}}</td>
+		<td>{{item.Land_easement_cost}}</td>
+		<td>{{item.Total_cost}}</td>
+		<td><a href="" ng-click = "getSite(item.Site_id)">{{item.Site_id}}</a></td>
+		<td><a href="" ng-click = "getVerification(item.Verification_id)">Verification</a></td>
+
+<!-- 		<td>{{item.lastName}}</td>
+		<td>{{item.birthDate}}</td>
+		<td>{{item.balance}}</td>
+		<td>{{item.email}}</td> -->
+	</tr>
+	</tbody>
+</table>
+	<table ng-show= "repairTable" st-table="rowCollection" class="table table-striped">
+	<thead>
+	<tr>
+		<th>Purpose</th>
+		<th>Description</th>
+		<th>Date</th>
+		<th>Effort</th>
+		<th>Cost</th>
+		<th>Site ID</th>
+		<th>Verification ID</th>
+
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="item in items">
+		<td>{{item.Purpose}}</td>
+		<td>{{item.Description}}</td>
+		<td>{{item.Date}}</td>
+		<td>{{item.Effort}}</td>
+		<td>{{item.Cost}}</td>
+		<td><a href="" ng-click = "getSite(item.Site_id)">{{item.Site_id}}</a></td>
+		<td><a href="" ng-click = "getVerification(item.Verification_id)">Verification</a></td>
+
+<!-- 		<td>{{item.lastName}}</td>
+		<td>{{item.birthDate}}</td>
+		<td>{{item.balance}}</td>
+		<td>{{item.email}}</td> -->
+	</tr>
+	</tbody>
+</table>
+	<table ng-show= "incidentTable" st-table="rowCollection" class="table table-striped">
+	<thead>
+	<tr>
+		<th>Type</th>
+		<th>Flow</th>
+		<th>Helmet of PFD</th>
+		<th>Weather</th>
+		<th>Witnesses</th>
+		<th>Difficulty</th>
+		<th>Date</th>
+		<th>Site ID</th>
+		<th>Verification ID</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="item in items">
+		<td>{{item.Type}}</td>
+		<td>{{item.Flow}}</td>
+		<td>{{item.Helmet_pfd}}</td>
+		<td>{{item.Weather}}</td>
+		<td>{{item.Witnesses}}</td>
+		<td>{{item.Difficulty}}</td>
+		<td>{{item.Date}}</td>
+		<td><a href="" ng-click = "getSite(item.Site_id)">{{item.Site_id}}</a></td>
+		<td><a href="" ng-click = "getVerification(item.Verification_id)">Verification</a></td>
+
+
+
+<!-- 		<td>{{item.lastName}}</td>
+		<td>{{item.birthDate}}</td>
+		<td>{{item.balance}}</td>
+		<td>{{item.email}}</td> -->
+	</tr>
+	</tbody>
+</table>
+	<table ng-show= "verificationTable" st-table="rowCollection" class="table table-striped">
+	<thead>
+	<tr>
+		<th>Verification_id</th>
+		<th>Name of Source</th>
+		<th>Web Site</th>
+		<th>Date of Source</th>
+		<th>Authority</th>
+		<th>Created</th>
+		<th>Updated</th>
+
+
+
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="item in items">
+		<td>{{item.Verification_id}}</td>
+		<td>{{item.Name_of_source}}</td>
+		<td>{{item.Website}}</td>
+		<td>{{item.Date_of_source}}</td>
+		<td>{{item.Authority}}</td>
+		<td>{{item.createdAt}}</td>
+		<td>{{item.updatedAt}}</td>
+
+<!-- 		<td>{{item.lastName}}</td>
+		<td>{{item.birthDate}}</td>
+		<td>{{item.balance}}</td>
+		<td>{{item.email}}</td> -->
+	</tr>
+	</tbody>
+
+<!-- 		<h1>there are {{items.length}} results</h1>
+		<div ng-repeat="item in items">
+        <span ng-switch on="$index % 3">
+            <span ng-switch-when="0">
+                <div class="row">
+	                    <div class="col-sm-4" ng-show="items[$index+0]">{{items[$index+0]}}</div>
+	                    <div class="col-sm-4" ng-show="items[$index+1]">{{items[$index+1]}}</div>
+	                    <div class="col-sm-4" ng-show="items[$index+2]">{{items[$index+2]}}</div>
+	                </div>
+	            </span>
+	        </span>
+	    </div> -->
+	</div >
+
+</div>

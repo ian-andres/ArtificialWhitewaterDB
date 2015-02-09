@@ -1,0 +1,22 @@
+{
+  "name": "dbproject",
+  "version": "0.0.0",
+  "authors": [
+    "Ian McLaughlin <ian.mclaughlin64@gmail.com>"
+  ],
+  "description": "personal project",
+  "main": "app.js",
+  "license": "MIT",
+  "homepage": "public/login.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-smart-table": "~1.4.5",
+    "ngmap": "~1.2.0"
+  }
+}
